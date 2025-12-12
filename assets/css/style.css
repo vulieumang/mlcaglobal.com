@@ -50,8 +50,8 @@
   --primary-dark: #6B3410;
   --secondary-color: #D4AF37;
   --accent-color: #C19A6B;
-  --green-color: #2E5C45;
-  /* Forest Green for Health/Nature */
+  --green-color: #3C783C;
+  /* Forest Green - Found in main.dart.js (Title/Active color) */
   --text-dark: #2C1810;
   --text-light: #5A4A42;
   --bg-light: #FFF8F0;
@@ -201,16 +201,18 @@ p {
 }
 
 .header__cta {
-  background: var(--primary-color);
+  background: var(--green-color);
   color: var(--bg-white);
   padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: 25px;
+  border-radius: 4px;
+  /* Matches user snippet border-radius: 4px */
   font-weight: 600;
   transition: var(--transition-fast);
 }
 
 .header__cta:hover {
-  background: var(--primary-dark);
+  background: #2b572b;
+  /* Darker shade of #3C783C */
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
