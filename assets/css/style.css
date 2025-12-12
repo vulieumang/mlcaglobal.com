@@ -2,6 +2,47 @@
    MLCA Global - Main Stylesheet
    =========================== */
 
+/* Font Faces */
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('../fonts/SVN-Poppins Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('../fonts/SVN-Poppins Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('../fonts/SVN-Poppins SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('../fonts/SVN-Poppins Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Book Antiqua';
+  src: url('../fonts/SVN-Book Antiqua.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* CSS Variables */
 :root {
   /* Colors */
@@ -9,16 +50,18 @@
   --primary-dark: #6B3410;
   --secondary-color: #D4AF37;
   --accent-color: #C19A6B;
+  --green-color: #2E5C45;
+  /* Forest Green for Health/Nature */
   --text-dark: #2C1810;
   --text-light: #5A4A42;
   --bg-light: #FFF8F0;
   --bg-white: #FFFFFF;
   --border-color: #E5D5C5;
-  
+
   /* Typography */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading: 'Playfair Display', Georgia, serif;
-  
+  --font-primary: 'SVN-Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'SVN-Book Antiqua', serif;
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -26,12 +69,12 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-xxl: 4rem;
-  
+
   /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 20px rgba(0,0,0,0.15);
-  
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
@@ -77,7 +120,12 @@ button {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
@@ -174,7 +222,7 @@ p {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgba(107, 52, 16, 0.8)),
-              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23D4AF37" width="1200" height="800"/></svg>');
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23D4AF37" width="1200" height="800"/></svg>');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -208,7 +256,7 @@ p {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
   margin-bottom: var(--spacing-md);
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   line-height: 1.1;
 }
 
@@ -356,6 +404,7 @@ p {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -367,20 +416,20 @@ p {
   .header__nav {
     gap: var(--spacing-sm);
   }
-  
+
   .header__link {
     font-size: 0.875rem;
   }
-  
+
   .hero {
     min-height: 80vh;
     padding: var(--spacing-xl) var(--spacing-md);
   }
-  
+
   .section {
     padding: var(--spacing-xl) var(--spacing-md);
   }
-  
+
   .cards {
     grid-template-columns: 1fr;
   }
@@ -390,15 +439,15 @@ p {
   .header__container {
     padding: var(--spacing-xs) var(--spacing-sm);
   }
-  
+
   .header__logo {
     font-size: 1rem;
   }
-  
+
   .header__logo-img {
     width: 32px;
   }
-  
+
   .header__cta {
     padding: var(--spacing-xs) var(--spacing-sm);
     font-size: 0.875rem;
